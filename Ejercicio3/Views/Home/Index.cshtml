@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@{
+    DateTime horaActual = DateTime.Now;
+    int hora = 12;
+    String mensaje = "";
+    if (horaActual.Hour >= hora)
+    {
+        mensaje = "Hemos pasado de las 12 del mediodía";
+    }
+    else
+        mensaje = "No hemos pasado de las 12 del mediodía";
+}
+<div>
+    <p>Hola son las </p>
+    <time datetime="hh:mm">@horaActual.Hour:@horaActual.Minute</time>
+</div>
+<p>@mensaje</p>
